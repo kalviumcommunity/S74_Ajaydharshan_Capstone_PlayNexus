@@ -13,25 +13,25 @@ router.get('/', async (req, res) => {
 });
 
 
-// // POST a new entity
-// router.post('/add', async (req, res) => {
-//   const { type, name, description, imageUrl, location } = req.body;
+// POST a new entity
+router.post('/add', async (req, res) => {
+  const { type, name, description, imageUrl, location } = req.body;
 
-//   const newEntity = new Entity({
-//     type,
-//     name,
-//     description,
-//     imageUrl,
-//     location
-//   });
+  const newEntity = new Entity({
+    type,
+    name,
+    description,
+    imageUrl,
+    location
+  });
 
-//   try {
-//     const savedEntity = await newEntity.save();
-//     res.status(201).json(savedEntity);
-//   } catch (err) {
-//     res.status(400).json({ message: err.message });
-//   }
-// });
+  try {
+    const savedEntity = await newEntity.save();
+    res.status(201).json(savedEntity);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
 // // PUT (update) an entity by ID
 // router.put('/update/:id', async (req, res) => {
