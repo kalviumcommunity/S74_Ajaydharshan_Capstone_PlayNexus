@@ -33,26 +33,26 @@ router.post('/add', async (req, res) => {
   }
 });
 
-// // PUT (update) an entity by ID
-// router.put('/update/:id', async (req, res) => {
-//   const { type, name, description, imageUrl, location } = req.body;
+// PUT (update) an entity by ID
+router.put('/update/:id', async (req, res) => {
+  const { type, name, description, imageUrl, location } = req.body ;
 
-//   try {
-//     const updatedEntity = await Entity.findByIdAndUpdate(
-//       req.params.id,
-//       { type, name, description, imageUrl, location },
-//       { new: true }
-//     );
+  try {
+    const updatedEntity = await Entity.findByIdAndUpdate(
+      req.params.id,
+      { type, name, description, imageUrl, location },
+      { new: true }
+    );
 
-//     if (!updatedEntity) {
-//       return res.status(404).json({ message: 'Entity not found' });
-//     }
+    if (!updatedEntity) {
+      return res.status(404).json({ message: 'Entity not found' });
+    }
 
-//     res.json(updatedEntity);
-//   } catch (err) {
-//     res.status(400).json({ message: err.message });
-//   }
-// });
+    res.json(updatedEntity);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+}) ;
 
 module.exports = router;
 
