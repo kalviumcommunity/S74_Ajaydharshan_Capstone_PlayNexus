@@ -143,3 +143,8 @@ A full-stack web application that helps users find gaming cafes and centers near
   - Security audit & performance testing
 
 ---
+## Deployment link:
+https://app.netlify.com/projects/statuesque-kangaroo-c07394/overview
+
+## Render link:
+https://statuesque-kangaroo-c07394.netlify.app/

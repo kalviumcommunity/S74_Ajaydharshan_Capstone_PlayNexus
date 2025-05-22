@@ -5,10 +5,10 @@ const Entity = require('../models/entity');
 // GET all entities
 router.get('/', async (req, res) => {
   try {
-    const entities = await Entity.find(); // Retrieve all documents from the Entity collection
-    res.json(entities); // Send the result as JSON
+    const entities = await Entity.find(); 
+    res.json(entities); 
   } catch (err) {
-    res.status(500).json({ message: err.message }); // Handle any errors
+    res.status(500).json({ message: err.message }); 
   }
 });
 
