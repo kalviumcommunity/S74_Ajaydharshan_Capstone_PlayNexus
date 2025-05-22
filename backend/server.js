@@ -11,9 +11,11 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log('MongoDB connected SUCCESSFULLY'))
-.catch((err) => console.error('MongoDB connection error:', err));
+
+
+mongoose.connect("mongodb+srv://ajays74:ajayplay@cluster0.jma0ojw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
 
 
 const entityRoutes = require('./routes/entityRoutes');
