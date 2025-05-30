@@ -144,9 +144,6 @@ A full-stack web application that helps users find gaming cafes and centers near
 
 ---
 ## Frontend Deployment link:
-https://app.netlify.com/projects/statuesque-kangaroo-c07394/overview
-
-## Frontend Render link:
 https://statuesque-kangaroo-c07394.netlify.app/
 
 ## Backend Deployment link:
